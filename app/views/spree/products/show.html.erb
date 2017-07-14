@@ -37,21 +37,22 @@
         </div>
         
         <div class="col-md-6" data-hook="product_right_part">
+          <h6 class="product-section-title"><%= Spree.t('detail')%></h6>
+          
           <div data-hook="product_right_part_wrap" class='panel panel-default'>
-    
-            <div id="product-description" data-hook="product_description" class='panel-body'>
-    
-              <div itemprop="description" data-hook="description">
-                <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
-              </div>
-    
-              <div id="cart-form" data-hook="cart_form">
-                <%= render partial: 'cart_form' %>
+            <div class='panel-body'>
+              <div id="product-description" data-hook="product_description">
+      
+                <div itemprop="description" data-hook="description">
+                  <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+                </div>
+      
+                <div id="cart-form" data-hook="cart_form">
+                  <%= render partial: 'cart_form' %>
+                </div>
               </div>
               <%= render partial: 'taxons' %>
             </div>
-    
-
           </div>
         </div>
     </div>
